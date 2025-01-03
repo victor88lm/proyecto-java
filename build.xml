@@ -68,4 +68,14 @@
     nbproject/build-impl.xml file. 
 
     -->
+
+    <target name="jar" depends="compile" description="Empaqueta la aplicación en un archivo JAR.">
+    <mkdir dir="dist"/>
+    <jar destfile="dist/Java_Project.jar" basedir="build/classes">
+        <manifest>
+            <attribute name="Main-Class" value="com.miempresa.MainClass"/>
+        </manifest>
+    </jar>
+</target>
+
 </project>
